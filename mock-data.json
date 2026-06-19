@@ -1,0 +1,13 @@
+{"menu":[
+{"id":"m1","name":"Margherita Pizza","price":14,"prep":12,"allergens":["gluten","dairy"]},
+{"id":"m2","name":"Caesar Salad","price":11,"prep":5,"allergens":["dairy","eggs"]},
+{"id":"m3","name":"Grilled Salmon","price":22,"prep":18,"allergens":["fish"]},
+{"id":"m4","name":"Vegan Buddha Bowl","price":15,"prep":8,"allergens":[]},
+{"id":"m5","name":"Pad Thai","price":13,"prep":10,"allergens":["peanuts","soy"]},
+{"id":"m6","name":"Tiramisu","price":8,"prep":3,"allergens":["eggs","dairy","gluten"]},
+{"id":"m7","name":"Espresso","price":4,"prep":2,"allergens":[]},
+{"id":"m8","name":"Sparkling Water","price":3,"prep":1,"allergens":[]}],
+"upsells":{
+"m1":["Add Caesar Salad — guests who ordered Margherita ordered Caesar 38% of the time"],
+"m3":["Pair with a glass of Sauvignon Blanc ($8) — 62% attach rate"],
+"m5":["Suggest Sparkling Water (peanuts spicy + cleanses palate)"]}}

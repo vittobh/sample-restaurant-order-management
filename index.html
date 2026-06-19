@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Restaurant Waiter Copilot</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"></head>
+<body><header>
+<div><h1>Restaurant Waiter Copilot</h1><div class="tagline">Voice order · allergen RAG · upsell · kitchen ETA</div></div>
+<button id="theme-toggle" class="theme-toggle">☾ Dark</button>
+</header><main>
+<div id="ai-banner" class="banner" style="display:none"></div>
+<div class="row" style="margin-bottom:1rem">
+  <span class="dim">Live AI keys:</span>
+  <button class="btn btn-ghost" onclick="app.setKey('anthropic')">+ Claude</button>
+  <button class="btn btn-ghost" onclick="app.setKey('gemini')">+ Gemini</button>
+  <button class="btn btn-ghost" onclick="app.setKey('grok')">+ Grok</button>
+</div>
+<div class="banner banner-ok">📲 Table 7 assigned · 4 guests · Alice, Bob, Carol, Dan</div>
+<div class="grid" style="grid-template-columns:2fr 1fr">
+  <div class="card"><h3>Order entry</h3>
+    <div class="row"><span style="width:6rem">Table</span>
+      <select class="select" id="table"><option>T1</option><option selected>T7</option><option>T9</option></select></div>
+    <div class="row" style="margin-top:.5rem"><input class="input" id="search" placeholder="Search menu… (type-ahead)" oninput="search()">
+    <button class="btn" onclick="voice()">🎤 Voice</button></div>
+    <div id="sugg" style="margin-top:.25rem"></div>
+    <h3 style="margin-top:1rem">Order</h3>
+    <table><thead><tr><th>Item</th><th>Qty</th><th>Price</th><th></th></tr></thead><tbody id="order"></tbody></table>
+    <div class="row" style="margin-top:.5rem"><b style="flex:1">Total</b><b id="total">$0</b></div>
+    <button class="btn btn-primary" style="margin-top:.5rem;width:100%" onclick="submit()">Submit to Kitchen</button>
+  </div>
+  <div class="card"><h3>🤖 AI Panel</h3>
+    <button class="btn" onclick="check()">Check Allergens</button>
+    <button class="btn" onclick="upsell()">Suggest Upsell</button>
+    <div id="ai" class="dim" style="font-size:.85rem;margin-top:.5rem"></div>
+    <h3 style="margin-top:1rem">Kitchen ETA</h3>
+    <div id="eta" class="dim" style="font-size:.85rem">—</div>
+  </div>
+</div>
+</main>
+<script src="app.js"></script><script src="page.js"></script>
+</body></html>
